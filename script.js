@@ -75,53 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', highlightNavOnScroll, { passive: true });
 
-  // ========================================
-  // 4. SAVINGS CALCULATOR
-  // ========================================
-  const calcStops = document.getElementById('calc-stops');
-  const calcDays = document.getElementById('calc-days');
-  const calcFuel = document.getElementById('calc-fuel');
-  const stopsValue = document.getElementById('stops-value');
-  const daysValue = document.getElementById('days-value');
-  const fuelValue = document.getElementById('fuel-value');
-  const calcSavings = document.getElementById('calc-savings');
-  const calcLiters = document.getElementById('calc-liters');
-  const calcHours = document.getElementById('calc-hours');
 
-  const updateCalculator = () => {
-    if (!calcStops || !calcDays || !calcFuel) return;
-
-    const stops = parseInt(calcStops.value);
-    const days = parseInt(calcDays.value);
-    const fuel = parseFloat(calcFuel.value);
-
-    // Display current values
-    stopsValue.textContent = stops;
-    daysValue.textContent = days;
-    fuelValue.textContent = `R$ ${fuel.toFixed(2).replace('.', ',')}`;
-
-    // Calculation logic:
-    // Average saving per stop: ~0.8 km less driven
-    // Average fuel consumption: 12 km/L (moto) to 8 km/L (car), use 10 km/L avg
-    // Average time saving per stop: ~3 minutes
-    const kmSavedPerDay = stops * 0.8;
-    const litersSavedPerDay = kmSavedPerDay / 10;
-    const litersSavedPerMonth = litersSavedPerDay * days;
-    const moneySaved = litersSavedPerMonth * fuel;
-    const hoursSaved = (stops * 3 * days) / 60; // minutes to hours
-
-    // Animate value updates
-    calcSavings.textContent = `R$ ${Math.round(moneySaved).toLocaleString('pt-BR')}`;
-    calcLiters.textContent = `${Math.round(litersSavedPerMonth)} L`;
-    calcHours.textContent = `${Math.round(hoursSaved)}h`;
-  };
-
-  if (calcStops) calcStops.addEventListener('input', updateCalculator);
-  if (calcDays) calcDays.addEventListener('input', updateCalculator);
-  if (calcFuel) calcFuel.addEventListener('input', updateCalculator);
-  
-  // Initial calculation
-  updateCalculator();
 
   // ========================================
   // 5. PRICING TOGGLE (Monthly <-> Annual)

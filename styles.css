@@ -339,14 +339,17 @@ button {
 }
 
 .hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .hero-content {
-  max-width: 620px;
+  max-width: 750px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-badge {
@@ -387,219 +390,160 @@ button {
   flex-wrap: wrap;
 }
 
-.hero-visual {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+/* ==========================================================================
+   PROBLEMA → SOLUÇÃO (COMPARISON) SECTION
+   ========================================================================== */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: stretch;
 }
 
-.hero-glow {
+.comparison-card {
+  background: var(--grad-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 40px 36px;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.comparison-card::before {
+  content: '';
   position: absolute;
-  width: 450px;
-  height: 450px;
-  background: var(--grad-glow);
-  z-index: 1;
-  border-radius: 50%;
-  filter: blur(40px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.comparison-without::before {
+  background: linear-gradient(90deg, #EF4444, #DC2626);
+}
+
+.comparison-with::before {
+  background: linear-gradient(90deg, #10B981, #059669);
+}
+
+.comparison-without {
+  background: linear-gradient(145deg, rgba(42, 39, 68, 0.7) 0%, rgba(30, 27, 46, 0.7) 100%);
+}
+
+.comparison-without::after {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.06) 0%, transparent 70%);
   pointer-events: none;
 }
 
-/* App Mockup Rendering (Pure Premium CSS) */
-.phone-mockup {
-  position: relative;
-  width: 300px;
-  height: 610px;
-  background: #000000;
-  border: 12px solid #1E1B2E;
-  border-radius: 40px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
-              0 0 0 2px var(--border-color);
-  z-index: 2;
-  overflow: hidden;
-  animation: float 6s ease-in-out infinite;
+.comparison-with {
+  background: linear-gradient(145deg, rgba(42, 39, 68, 0.7) 0%, rgba(30, 27, 46, 0.7) 100%);
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.08);
 }
 
-.phone-notch {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 140px;
-  height: 25px;
-  background: #1E1B2E;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.phone-notch::before {
+.comparison-with::after {
   content: '';
-  width: 40px;
-  height: 4px;
-  background: #000;
-  border-radius: 2px;
-}
-
-.phone-screen {
-  width: 100%;
-  height: 100%;
-  background: #0F0D1A;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 35px 16px 20px;
-  font-size: 12px;
-}
-
-/* Simulated App UI */
-.app-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-.app-title {
-  font-weight: 700;
-  font-size: 14px;
-}
-.app-avatar {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--primary);
-}
-
-.app-map-container {
-  flex: 1;
-  background: #1E1B2E;
-  border-radius: 16px;
-  border: 1px solid var(--border-color);
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 16px;
-}
-
-.app-map-svg {
-  width: 100%;
-  height: 100%;
-  opacity: 0.9;
-}
-
-.app-map-pin {
   position: absolute;
-  width: 14px;
-  height: 14px;
-  background: var(--primary);
-  border: 2px solid white;
+  top: -100px;
+  right: -100px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.comparison-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.comparison-with:hover {
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.12);
+}
+
+.comparison-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.comparison-icon {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 8px;
-  color: white;
-  font-weight: bold;
-}
-
-.app-map-pin.pin-1 { top: 25%; left: 30%; }
-.app-map-pin.pin-2 { top: 60%; left: 45%; background: var(--accent); }
-.app-map-pin.pin-3 { top: 40%; left: 75%; }
-.app-map-pin.pin-4 { top: 80%; left: 25%; }
-
-.app-route-card {
-  background: var(--surface-card);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 12px;
-}
-
-.app-route-info {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.app-route-stat {
-  font-size: 11px;
-  color: var(--text-secondary);
-}
-
-.app-route-stat strong {
-  color: white;
-  display: block;
-  font-size: 13px;
-}
-
-.app-route-btn {
-  background: var(--grad-accent);
-  color: white;
-  padding: 8px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 11px;
-}
-
-/* Floating Elements around phone */
-.floating-card {
-  position: absolute;
-  background: rgba(30, 27, 46, 0.8);
-  border: 1px solid var(--border-color);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 16px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  z-index: 3;
-}
-
-.floating-card-1 {
-  top: 15%;
-  right: -40px;
-  animation: floatCard1 8s ease-in-out infinite;
-}
-
-.floating-card-2 {
-  bottom: 15%;
-  left: -50px;
-  animation: floatCard2 7s ease-in-out infinite;
-}
-
-.float-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
-.floating-card-1 .float-icon {
+.comparison-icon-bad {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #F87171;
+}
+
+.comparison-icon-good {
   background: rgba(16, 185, 129, 0.1);
-  color: var(--accent);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #34D399;
 }
 
-.floating-card-2 .float-icon {
-  background: rgba(99, 102, 241, 0.1);
-  color: var(--primary);
+.comparison-header h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
-.float-info h4 {
-  font-size: 0.95rem;
-  margin-bottom: 2px;
+.comparison-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.float-info p {
-  font-size: 0.8rem;
+.comparison-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.comparison-list li > i {
+  font-size: 1.15rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.comparison-without .comparison-list li > i {
+  color: #F87171;
+}
+
+.comparison-with .comparison-list li > i {
+  color: #34D399;
+}
+
+.comparison-list li strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+
+.comparison-list li p {
   color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -671,146 +615,7 @@ button {
   font-size: 0.95rem;
 }
 
-/* ==========================================================================
-   CALCULATOR SECTION
-   ========================================================================== */
-.calc-wrapper {
-  background: radial-gradient(circle at 10% 20%, rgba(16, 185, 129, 0.05) 0%, rgba(15, 13, 26, 0) 50%),
-              var(--grad-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  padding: 48px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
 
-.calc-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.calc-inputs {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.input-label-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.input-label-row label {
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: var(--text-primary);
-}
-
-.input-val-badge {
-  background: rgba(99, 102, 241, 0.1);
-  color: var(--primary-light);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-
-/* Styled Slider Ranges */
-.calc-range {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 6px;
-  border-radius: var(--radius-full);
-  background: var(--surface-primary);
-  outline: none;
-}
-
-.calc-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--primary);
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
-  transition: transform var(--transition-fast);
-}
-
-.calc-range::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-}
-
-.calc-results {
-  background: rgba(15, 13, 26, 0.6);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 40px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.calc-results-glow {
-  position: absolute;
-  top: -150px;
-  right: -150px;
-  width: 300px;
-  height: 300px;
-  background: var(--grad-glow-green);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.results-content {
-  position: relative;
-  z-index: 2;
-}
-
-.results-title {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-
-.results-value {
-  font-family: 'Outfit', sans-serif;
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: var(--accent);
-  margin-bottom: 24px;
-}
-
-.results-stats-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  border-top: 1px solid var(--border-color);
-  padding-top: 24px;
-  margin-bottom: 24px;
-}
-
-.stat-box h4 {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-bottom: 4px;
-}
-
-.stat-box p {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: white;
-}
 
 /* ==========================================================================
    HOW IT WORKS SECTION
@@ -1272,7 +1077,7 @@ input:checked + .switch-slider:before {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr repeat(3, 1fr);
+  grid-template-columns: 1.5fr repeat(2, 1fr);
   gap: 48px;
   margin-bottom: 60px;
 }
@@ -1283,31 +1088,6 @@ input:checked + .switch-slider:before {
   margin-top: 16px;
   margin-bottom: 24px;
   max-width: 280px;
-}
-
-.social-links {
-  display: flex;
-  gap: 12px;
-}
-
-.social-link {
-  width: 38px;
-  height: 38px;
-  background: var(--surface-primary);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--text-secondary);
-  transition: all var(--transition-fast);
-}
-
-.social-link:hover {
-  background: var(--primary);
-  color: white;
-  border-color: var(--primary);
-  transform: translateY(-2px);
 }
 
 .footer-col h4 {
@@ -1417,10 +1197,11 @@ input:checked + .switch-slider:before {
   .hero-ctas {
     justify-content: center;
   }
-  
-  .calc-grid {
+
+
+  .comparison-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 24px;
   }
   
   .steps-timeline {
@@ -1483,13 +1264,10 @@ input:checked + .switch-slider:before {
   .nav-actions .btn {
     display: none; /* Hide on header, keep mobile clean */
   }
-  
-  .calc-wrapper {
-    padding: 24px;
-  }
-  
-  .calc-results {
-    padding: 24px;
+
+
+  .comparison-card {
+    padding: 28px 24px;
   }
   
   .results-value {
