@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RotaVip — Otimize suas Rotas de Entrega com IA</title>
+  <meta name="description" content="RotaVip organiza automaticamente a melhor rota de entrega usando Inteligência Artificial. Economize combustível, tempo e aumente seus lucros como entregador.">
+  <meta name="keywords" content="otimização de rotas, entrega, rota inteligente, entregador, app de rotas, IA, RotaVip">
+  <meta name="author" content="RotaVip">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="RotaVip — Otimize suas Rotas de Entrega com IA">
+  <meta property="og:description" content="O app que organiza automaticamente a melhor rota de entrega. Economize combustível e tempo.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <span class="logo-icon">R</span>
+        Rota<span class="logo-dot">Vip</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#features" class="nav-link">Funcionalidades</a></li>
+          <li><a href="#calculator" class="nav-link">Calculadora</a></li>
+          <li><a href="#how-it-works" class="nav-link">Como Funciona</a></li>
+          <li><a href="#pricing" class="nav-link">Planos</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-primary btn-sm">Baixar App</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <i class="fas fa-bolt"></i>
+            Otimização com Inteligência Artificial
+          </div>
+          <h1 class="hero-title">
+            Suas entregas na <span class="text-gradient">melhor rota</span> possível.
+          </h1>
+          <p class="hero-description">
+            Adicione seus endereços e o RotaVip organiza automaticamente a sequência ideal, considerando sentido das ruas, numeração e tempo de deslocamento.
+          </p>
+          <div class="hero-ctas">
+            <a href="#download" class="btn btn-primary">
+              <i class="fab fa-google-play"></i>
+              Google Play
+            </a>
+            <a href="#how-it-works" class="btn btn-secondary">
+              <i class="fas fa-play-circle"></i>
+              Como Funciona
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-glow"></div>
+
+          <!-- Phone Mockup -->
+          <div class="phone-mockup">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="app-header">
+                <span class="app-title">🚀 RotaVip</span>
+                <div class="app-avatar"></div>
+              </div>
+
+              <div class="app-map-container">
+                <!-- SVG Map Background -->
+                <svg class="app-map-svg" viewBox="0 0 276 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Grid lines -->
+                  <line x1="0" y1="60" x2="276" y2="60" stroke="#3D3866" stroke-width="0.5" stroke-dasharray="4 4"/>
+                  <line x1="0" y1="120" x2="276" y2="120" stroke="#3D3866" stroke-width="0.5" stroke-dasharray="4 4"/>
+                  <line x1="0" y1="180" x2="276" y2="180" stroke="#3D3866" stroke-width="0.5" stroke-dasharray="4 4"/>
+                  <line x1="0" y1="240" x2="276" y2="240" stroke="#3D3866" stroke-width="0.5" stroke-dasharray="4 4"/>
+                  <line x1="70" y1="0" x2="70" y2="320" stroke="#3D3866" stroke-width="0.5" stroke-dasharray="4 4"/>
+                  <line x1="140" y1="0" x2="140" y2="320" stroke="#3D3866" stroke-width="0.5" stroke-dasharray="4 4"/>
+                  <line x1="210" y1="0" x2="210" y2="320" stroke="#3D3866" stroke-width="0.5" stroke-dasharray="4 4"/>
+                  <!-- Route line -->
+                  <path d="M83 80 Q120 100 124 192 Q128 250 207 128 Q230 95 69 256" stroke="#6366F1" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-dasharray="6 4" opacity="0.8"/>
+                  <path d="M83 80 Q120 100 124 192 Q128 250 207 128 Q230 95 69 256" stroke="#818CF8" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.4"/>
+                </svg>
+                <!-- Pins -->
+                <div class="app-map-pin pin-1">1</div>
+                <div class="app-map-pin pin-2">2</div>
+                <div class="app-map-pin pin-3">3</div>
+                <div class="app-map-pin pin-4">4</div>
+              </div>
+
+              <div class="app-route-card">
+                <div class="app-route-info">
+                  <div class="app-route-stat">
+                    Paradas
+                    <strong>4 pontos</strong>
+                  </div>
+                  <div class="app-route-stat">
+                    Economia
+                    <strong style="color: #10B981;">-35%</strong>
+                  </div>
+                  <div class="app-route-stat">
+                    Tempo
+                    <strong>48 min</strong>
+                  </div>
+                </div>
+                <div class="app-route-btn">
+                  <i class="fas fa-route"></i> Iniciar Navegação
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Cards -->
+          <div class="floating-card floating-card-1">
+            <div class="float-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="float-info">
+              <h4>-35% combustível</h4>
+              <p>Economia média</p>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-2">
+            <div class="float-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="float-info">
+              <h4>1h30 salvas</h4>
+              <p>Por dia de trabalho</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FEATURES ====== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Funcionalidades</span>
+        <h2 class="section-title">Tudo que você precisa para entregar mais</h2>
+        <p class="section-subtitle">Ferramentas inteligentes projetadas para entregadores que querem maximizar seus ganhos e minimizar tempo na rua.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Otimização com IA</h3>
+          <p>Algoritmo inteligente que considera sentido das ruas, numeração crescente/decrescente, trânsito em tempo real e distância para montar a sequência perfeita.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <i class="fas fa-keyboard"></i>
+          </div>
+          <h3>Entrada Facilitada</h3>
+          <p>Digite os endereços rapidamente com autocompletar inteligente do Google Places. Adicione dezenas de paradas em poucos segundos.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h3>Integração GPS</h3>
+          <p>Abra diretamente no Waze ou Google Maps com um toque. Navegue ponto a ponto sem sair do fluxo de trabalho.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Relatórios & Histórico</h3>
+          <p>Acompanhe métricas de desempenho: quilômetros percorridos, tempo por rota, entregas concluídas e economia acumulada.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Seguro & Offline</h3>
+          <p>Seus dados ficam seguros na nuvem com criptografia. Rotas otimizadas funcionam mesmo sem conexão com a internet.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Velocidade Real</h3>
+          <p>Otimização instantânea. Insira até 50 endereços e receba a rota ideal em menos de 3 segundos, sem travar o celular.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CALCULATOR ====== -->
+  <section class="section" id="calculator">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Calculadora</span>
+        <h2 class="section-title">Quanto você pode economizar?</h2>
+        <p class="section-subtitle">Simule sua economia mensal de combustível e tempo usando o RotaVip nas suas entregas.</p>
+      </div>
+
+      <div class="calc-wrapper reveal">
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <div class="input-group">
+              <div class="input-label-row">
+                <label for="calc-stops">Paradas por dia</label>
+                <span class="input-val-badge" id="stops-value">20</span>
+              </div>
+              <input type="range" id="calc-stops" class="calc-range" min="5" max="80" value="20">
+            </div>
+
+            <div class="input-group">
+              <div class="input-label-row">
+                <label for="calc-days">Dias de trabalho por mês</label>
+                <span class="input-val-badge" id="days-value">22</span>
+              </div>
+              <input type="range" id="calc-days" class="calc-range" min="5" max="30" value="22">
+            </div>
+
+            <div class="input-group">
+              <div class="input-label-row">
+                <label for="calc-fuel">Preço do combustível (R$/L)</label>
+                <span class="input-val-badge" id="fuel-value">R$ 6,00</span>
+              </div>
+              <input type="range" id="calc-fuel" class="calc-range" min="4" max="10" value="6" step="0.5">
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div class="calc-results-glow"></div>
+            <div class="results-content">
+              <p class="results-title">Economia mensal estimada</p>
+              <p class="results-value" id="calc-savings">R$ 396</p>
+              <div class="results-stats-row">
+                <div class="stat-box">
+                  <h4><i class="fas fa-gas-pump"></i> Litros salvos</h4>
+                  <p id="calc-liters">66 L</p>
+                </div>
+                <div class="stat-box">
+                  <h4><i class="fas fa-clock"></i> Horas economizadas</h4>
+                  <p id="calc-hours">33h</p>
+                </div>
+              </div>
+              <a href="#download" class="btn btn-primary" style="width:100%;">
+                <i class="fas fa-download"></i> Começar a Economizar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== HOW IT WORKS ====== -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Passo a Passo</span>
+        <h2 class="section-title">Simples, Rápido e Inteligente</h2>
+        <p class="section-subtitle">Em três passos você já está entregando com a rota mais eficiente do dia.</p>
+      </div>
+
+      <div class="steps-timeline">
+        <div class="step-item reveal">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Adicione os Endereços</h3>
+          <p class="step-desc">Digite ou cole os endereços das entregas do dia. O autocompletar inteligente ajuda você.</p>
+        </div>
+
+        <div class="step-item reveal">
+          <div class="step-number">2</div>
+          <h3 class="step-title">A IA Otimiza</h3>
+          <p class="step-desc">Nosso algoritmo calcula a melhor sequência considerando distância, trânsito e sentido das ruas.</p>
+        </div>
+
+        <div class="step-item reveal">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Siga a Rota</h3>
+          <p class="step-desc">Inicie a navegação pelo Waze ou Google Maps e entregue mais rápido, gastando menos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PRICING ====== -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Planos</span>
+        <h2 class="section-title">Escolha o plano ideal para você</h2>
+        <p class="section-subtitle">Comece gratuitamente ou desbloqueie todo o potencial com o plano Pro.</p>
+      </div>
+
+      <div class="pricing-toggle-wrapper reveal">
+        <span class="toggle-label active" id="label-monthly">Mensal</span>
+        <label class="pricing-switch">
+          <input type="checkbox" id="pricing-toggle">
+          <span class="switch-slider"></span>
+        </label>
+        <span class="toggle-label" id="label-annual">Anual</span>
+        <span class="pricing-discount">-20%</span>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Grátis -->
+        <div class="price-card reveal">
+          <div class="price-header">
+            <h3>Grátis</h3>
+            <p>Perfeito para começar e conhecer o RotaVip.</p>
+          </div>
+          <div class="price-amount">R$ 0 <span>/ mês</span></div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li class="active"><i class="fas fa-check-circle"></i> Até 10 paradas por rota</li>
+            <li class="active"><i class="fas fa-check-circle"></i> 5 otimizações por dia</li>
+            <li class="active"><i class="fas fa-check-circle"></i> Navegação por GPS integrada</li>
+            <li class="active"><i class="fas fa-check-circle"></i> Histórico de 7 dias</li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> Relatórios de desempenho</li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> Modo offline</li>
+            <li class="disabled"><i class="fas fa-times-circle"></i> Suporte prioritário</li>
+          </ul>
+          <a href="#download" class="btn btn-secondary" style="width:100%;">Começar Grátis</a>
+        </div>
+
+        <!-- Pro -->
+        <div class="price-card popular reveal">
+          <div class="price-header">
+            <h3>Pro</h3>
+            <p>Para entregadores profissionais que querem o máximo.</p>
+          </div>
+          <div class="price-amount">
+            <span class="price-monthly">R$ 19,90</span>
+            <span class="price-annual" style="display:none;">R$ 15,90</span>
+            <span>/ mês</span>
+          </div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li class="active"><i class="fas fa-check-circle"></i> Paradas ilimitadas</li>
+            <li class="active"><i class="fas fa-check-circle"></i> Otimizações ilimitadas</li>
+            <li class="active"><i class="fas fa-check-circle"></i> Navegação por GPS integrada</li>
+            <li class="active"><i class="fas fa-check-circle"></i> Histórico completo</li>
+            <li class="active"><i class="fas fa-check-circle"></i> Relatórios de desempenho</li>
+            <li class="active"><i class="fas fa-check-circle"></i> Modo offline</li>
+            <li class="active"><i class="fas fa-check-circle"></i> Suporte prioritário 24h</li>
+          </ul>
+          <a href="#download" class="btn btn-primary" style="width:100%;">Assinar Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS ====== -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Depoimentos</span>
+        <h2 class="section-title">O que dizem nossos entregadores</h2>
+        <p class="section-subtitle">Milhares de entregadores já otimizaram suas rotas e aumentaram seus ganhos.</p>
+      </div>
+
+      <div class="testimonials-slider reveal">
+        <div class="testimonials-track">
+          <div class="testimonial-slide active">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Depois que comecei a usar o RotaVip, meu gasto com gasolina caiu quase pela metade. Faço as mesmas entregas em muito menos tempo. Recomendo demais!"</p>
+            <div class="testimonial-user">
+              <div class="testimonial-avatar">RL</div>
+              <div class="testimonial-info">
+                <h4>Ricardo Lima</h4>
+                <p>Entregador de e-commerce — São Paulo, SP</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Eu fazia rota no achômetro e sempre gastava mais. Com o RotaVip, ele organiza tudo certinho, respeitando mão de direção e tudo. Mudou meu dia a dia."</p>
+            <div class="testimonial-user">
+              <div class="testimonial-avatar">AF</div>
+              <div class="testimonial-info">
+                <h4>Ana Ferreira</h4>
+                <p>Entregadora autônoma — Belo Horizonte, MG</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">"Gerencio uma equipe de 8 entregadores e o RotaVip reduziu nosso custo operacional em quase 30%. A economia de combustível já pagou a assinatura muitas vezes."</p>
+            <div class="testimonial-user">
+              <div class="testimonial-avatar">MS</div>
+              <div class="testimonial-info">
+                <h4>Marcos Santos</h4>
+                <p>Gestor de frotas — Rio de Janeiro, RJ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-nav" id="testimonials-nav">
+          <button class="testimonial-dot active" data-index="0" aria-label="Depoimento 1"></button>
+          <button class="testimonial-dot" data-index="1" aria-label="Depoimento 2"></button>
+          <button class="testimonial-dot" data-index="2" aria-label="Depoimento 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FAQ ====== -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-subtitle">Tire suas dúvidas sobre o RotaVip.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" id="faq-q1">
+            O RotaVip funciona para qualquer tipo de entrega?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sim! O RotaVip é ideal para entregas de e-commerce, delivery de comida, correspondências, encomendas e qualquer rota com múltiplos pontos de parada. Funciona tanto para motoboys quanto para motoristas de van ou carro.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" id="faq-q2">
+            Como a IA calcula a melhor rota?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Nosso algoritmo utiliza a API do Google Routes combinada com heurísticas proprietárias. Ele considera: distância real entre pontos, tempo estimado com trânsito, sentido das ruas (mão única/dupla), numeração crescente e decrescente para evitar retornos desnecessários.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" id="faq-q3">
+            Preciso de internet para usar?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Para otimizar a rota, é necessário conexão com a internet. Porém, no plano Pro, após a otimização, a rota fica salva offline e você pode navegar mesmo sem sinal de dados.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" id="faq-q4">
+            Posso cancelar a assinatura a qualquer momento?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sim, você pode cancelar sua assinatura Pro a qualquer momento diretamente pelo app ou pela Google Play. Não há multa nem fidelidade. Após o cancelamento, você volta automaticamente para o plano Grátis.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" id="faq-q5">
+            O app funciona no iPhone (iOS)?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Atualmente o RotaVip está disponível para Android na Google Play Store. A versão para iOS está em desenvolvimento e será lançada em breve. Você pode se cadastrar para ser notificado quando estiver disponível.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-question" id="faq-q6">
+            Quantas paradas posso adicionar?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>No plano Grátis, você pode adicionar até 10 paradas por rota. No plano Pro, o número de paradas é ilimitado — entregadores profissionais costumam adicionar entre 30 e 80 pontos por rota.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CTA DOWNLOAD ====== -->
+  <section class="section" id="download">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div class="cta-content">
+          <h2>Pronto para <span class="text-gradient">otimizar</span> suas entregas?</h2>
+          <p>Baixe o RotaVip agora e comece a economizar tempo e dinheiro desde a primeira entrega. É grátis para começar.</p>
+          <div class="hero-ctas" style="justify-content:center;">
+            <a href="#" class="btn btn-primary">
+              <i class="fab fa-google-play"></i>
+              Baixar na Google Play
+            </a>
+            <a href="#" class="btn btn-secondary">
+              <i class="fas fa-envelope"></i>
+              Avise-me no iOS
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-icon">R</span>
+            Rota<span class="logo-dot">Vip</span>
+          </a>
+          <p>Otimizando rotas de entrega com Inteligência Artificial para entregadores que querem ganhar mais e gastar menos.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Produto</h4>
+          <ul class="footer-links">
+            <li><a href="#features">Funcionalidades</a></li>
+            <li><a href="#pricing">Planos & Preços</a></li>
+            <li><a href="#calculator">Calculadora</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul class="footer-links">
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Parcerias</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Suporte</h4>
+          <ul class="footer-links">
+            <li><a href="#">Central de Ajuda</a></li>
+            <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+            <li><a href="termos-de-uso.html">Termos de Uso</a></li>
+            <li><a href="mailto:suporte@rotavip.app">suporte@rotavip.app</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 RotaVip. Todos os direitos reservados.</p>
+        <div class="footer-legal-links">
+          <a href="politica-de-privacidade.html">Privacidade</a>
+          <a href="termos-de-uso.html">Termos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
